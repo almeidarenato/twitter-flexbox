@@ -2,7 +2,7 @@
 
 ## Como foi feito?
 
-Feito com HTML + CSS e utilizando o [yousefelgoharyx/edge-icons](https://github.com/yousefelgoharyx/edge-icons) .
+Feito com HTML + CSS e utilizando o [yousefelgoharyx/edge-icons](https://github.com/yousefelgoharyx/edge-icons) para os ícones + alguns icones SVG fornecidos pela RocketSeat .
 
 ## Como eu posso ver o site?
 

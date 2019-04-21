@@ -2,24 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #8899a6;
 }
 input,
 button {
   outline: 0;
 }
-a {
+#main-header a {
   background: transparent;
   text-decoration: none !important;
+  color: #8899a6;
 }
-a:hover {
+#main-header a:hover {
   border-bottom: 2px solid #1c94e0;
   border-bottom-color: #19cf86;
+  border-bottom-width: 2px;
   color: #19cf86 !important;
   transition: all 0.15s ease-in-out;
+  height: 100%;
+  color: #8899a6;
 }
 
-a:-webkit-any-link {
+#main-header a:-webkit-any-link {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -101,6 +104,7 @@ header#main-header div.side input {
 }
 header#main-header div.side input:focus {
   border: 2px solid #19ad76;
+  color: #8899a6;
 }
 .Icon--bird {
   color: #1da1f2;
@@ -114,10 +118,12 @@ div.banner {
   height: 380px;
   width: 100%;
   background: #38444d;
+  color: #8899a6;
 }
 h1 {
   font-weight: 200;
   font-size: 40px;
+  color: #8899a6;
 }
 
 div.bar {
@@ -135,12 +141,25 @@ div.bar .content {
 div.bar .content ul {
   list-style: none;
   display: flex;
+  height: 100%;
 }
 div.bar .content ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 15px;
+  position: relative;
+  justify-content: center;
+  color: #8899a6;
+}
+div.bar .content ul li.active ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #19ad76;
 }
 div.bar .content ul li span {
   font-size: 12px;
@@ -152,7 +171,12 @@ div.bar .content ul li strong {
   font-weight: bold;
   margin-top: 12px;
 }
-
+div.bar .content ul li.active strong {
+  color: #19ad76;
+}
+div.bar .content .actions {
+  display: flex;
+}
 div.bar .content .actions button {
   height: 34px;
   width: 90px;
@@ -166,4 +190,195 @@ div.bar .content .actions button {
   border-radius: 16px;
   border-color: #b0b0b0;
   color: #b0b0b0;
+  margin-right: 20px;
+}
+div.wrapper-content {
+  display: flex;
+}
+
+div.wrapper-content aside.profile {
+  width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #15202b;
+  margin-top: -130px;
+}
+div.wrapper-content aside.profile h2 {
+  color: #ffffff;
+  font-size: 21px;
+  margin-top: 10px;
+}
+div.wrapper-content aside.profile span {
+  color: #8899a6;
+}
+div.wrapper-content aside.profile p {
+  font-size: 14px;
+  color: #8899a6;
+  margin-top: 15px;
+}
+div.wrapper-content aside.profile ul.dados-pessoais {
+  color: #8899a6;
+  list-style: none;
+  margin-top: 15px;
+}
+div.wrapper-content aside.profile ul.dados-pessoais li {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  color: #8899a6;
+  margin-top: 5px;
+}
+div.wrapper-content aside.profile ul.dados-pessoais li:first-child {
+  margin-top: 0px;
+}
+div.wrapper-content aside.profile ul.dados-pessoais a {
+  color: #19ad76;
+}
+div.wrapper-content aside.profile ul.dados-pessoais img {
+  margin-right: 10px;
+}
+div.wrapper-content aside.profile div.widget {
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile div.widget strong {
+  font-weight: normal;
+  font-size: 14px;
+  color: #8899a6;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile div.widget strong {
+  margin-right: 5px;
+}
+div.wrapper-content aside.profile .followers ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+div.wrapper-content aside.profile .followers ul li {
+  width: 45px;
+  height: 45px;
+  background: #aaadaf;
+  border-radius: 50%;
+  flex: 1 0 auto;
+  margin: 0px 5px 5px 0px;
+}
+
+div.wrapper-content aside.profile .images ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+div.wrapper-content aside.profile .images ul li {
+  width: 70px;
+  height: 70px;
+  background: #aaadaf;
+  flex: 1 0 auto;
+  border-radius: 8%;
+  margin: 0px 5px 5px 0px;
+}
+div.wrapper-content section.timeline {
+  flex: 1;
+}
+div.wrapper-content aside.widgets {
+  width: 290px;
+  margin-top: 10px;
+}
+div.wrapper-content aside.widgets .widget {
+  background-color: #15202b;
+  border: 1px solid #38444d;
+  padding: 15px;
+}
+div.wrapper-content aside.widgets .widget .title {
+  display: flex;
+  align-items: baseline;
+}
+div.wrapper-content aside.widgets .widget .title strong {
+  font-size: 18px;
+  color: #fff;
+}
+
+div.wrapper-content aside.widgets .widget .title a {
+  font-size: 12px;
+  color: #19cf86;
+  padding-left: 10px;
+  position: relative;
+}
+div.wrapper-content aside.widgets .widget .title a::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+div.wrapper-content aside.widgets .follow ul {
+  list-style: none;
+  margin-top: 10px;
+}
+div.wrapper-content aside.widgets .follow ul li :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+div.wrapper-content aside.widgets .follow ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #8899a6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+div.wrapper-content aside.widgets .follow ul li .profile {
+  display: flex;
+  align-items: center;
+}
+div.wrapper-content aside.widgets .follow ul li .profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+div.wrapper-content aside.widgets .follow ul li .profile .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+div.wrapper-content aside.widgets .follow ul li .profile .info strong {
+  font-size: 14px;
+  color: #fff;
+}
+div.wrapper-content aside.widgets .follow ul li .profile .info strong span {
+  font-weight: normal;
+  color: #8899a6;
+}
+
+div.wrapper-content aside.widgets .follow ul li .profile .info button {
+  height: 26px;
+  width: 86px;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #15202b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8899a6;
+  border-radius: 16px;
+  color: #b0b0b0;
+  margin-right: 20px;
+  margin-top: 4px;
+}
+div.wrapper-content aside.widgets .follow ul li > a {
+  color: #ccd6dd;
+  text-decoration: none;
+  font-size: 14px;
 }
